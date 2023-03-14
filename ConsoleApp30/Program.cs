@@ -4,11 +4,11 @@ for (int i = 0; i < 31; i++)
 {
     poleT[i] = int.Parse(Console.ReadLine());
 }
-
+// Cyklus na zadání teplot 
 Console.WriteLine("Co mám vypsat?");
 Console.WriteLine("Největší teplotu,nejmenší nebo průměr?");
 string teplota = Console.ReadLine();
-
+// Výběr co to vypíše
 if ( teplota == "Nejmenší")
 
 {
@@ -21,6 +21,7 @@ if ( teplota == "Nejmenší")
 
     Console.WriteLine(min);
 }
+// Vypíše max teplotu 
 
 else if
      (teplota == "Největší")
@@ -35,3 +36,14 @@ else if
 
         Console.WriteLine(max);
 }
+// Vypíše max teplotu 
+else
+{
+    double avrg = poleT[0];
+    foreach (int i in poleT)
+    {
+        avrg = poleT.Average();
+    }
+    Console.WriteLine("Průměr teplot je:" + avrg);
+}
+//Vypíše průměrnou teplotu
